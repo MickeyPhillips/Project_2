@@ -12,3 +12,4 @@ const session = require('express-session');
 app.listen(PORT, () => {
     console.log(`Running on PORT ${PORT}!`);
 })
+'hello'
