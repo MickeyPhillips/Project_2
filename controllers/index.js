@@ -1,10 +1,7 @@
 const router = require('express').Router();
-const homeRoutes = require('./home-routes');
-// Feel free to remove the routers I used them to test the handlebars
-router.use('/', homeRoutes);
 
-router.use((req, res) => {
-    res.status(404).end();
+router.get('/', (req, res) => {
+  res.render('homepage');
 });
 
 module.exports = router;
