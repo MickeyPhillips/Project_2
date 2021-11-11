@@ -1,9 +1,94 @@
-*{
+* {
     margin: 0;
-    padding: 0;
-}
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: green;
-    font-size: large;
-}
+  }
+  
+  body {
+    background-color: #ecf0f1;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: white;
+    padding: 50px;
+  }
+  
+  .menu {
+    float: left;
+    margin: 20px 10px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #34495e;
+  }
+  
+  .row {
+    line-height: 50px;
+    height: 50px;
+    background-color: #34495e;
+    display: none;
+    width: 200px;
+    margin-left: auto;
+    opacity: 0;
+  }
+  
+  .row:hover,
+  .menu:hover {
+    background-color: #2c3e50;
+    cursor: pointer;
+  }
+  
+  .row:last-child {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .menu:hover {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .menu:hover > .row {
+    display: block;
+  }
+  
+  .rowc {
+    transition: width 300ms;
+  }
+  
+  .rowc {
+    transform: translateY(-80%);
+  }
+  
+  .rowc:hover {
+    /* 	width: 190px; */
+  }
+  
+  .menu:hover .rowc1 {
+    animation: rowc 300ms 0ms forwards;
+  }
+  .rowc2 {
+    animation: rowc 300ms 100ms forwards;
+  }
+  .rowc3 {
+    animation: rowc 300ms 200ms forwards;
+  }
+  .rowc4 {
+    animation: rowc 300ms 300ms forwards;
+  }
+  .rowc5 {
+    animation: rowc 300ms 400ms forwards;
+  }
+  .rowc6 {
+    animation: rowc 300ms 500ms forwards;
+  }
+  
+  @keyframes rowc {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
