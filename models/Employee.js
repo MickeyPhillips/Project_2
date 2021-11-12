@@ -25,7 +25,7 @@ Employee.init(
                 len: [4]
             }
         },
-        role: {
+        role_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {

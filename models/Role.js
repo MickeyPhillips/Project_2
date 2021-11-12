@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Resource extends Model {};
+class Role extends Model {};
 
-Resource.init(
+Role.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -13,15 +13,7 @@ Resource.init(
         name: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        description: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        link: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+        }
     },
     {
         sequelize,
@@ -31,4 +23,4 @@ Resource.init(
     }
 );
 
-module.exports = Resource;
+module.exports = Role;
