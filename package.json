@@ -17,12 +17,14 @@
   },
   "homepage": "https://github.com/MickeyPhillips/Project_2#readme",
   "dependencies": {
+    "autoprefixer": "^10.4.0",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.2",
+    "postcss": "^8.3.11",
     "sequelize": "^6.9.0",
     "tailwindcss": "^2.2.19",
     "uuid": "^8.3.2"
