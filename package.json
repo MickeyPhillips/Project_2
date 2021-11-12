@@ -26,7 +26,8 @@
     "mysql2": "^2.3.2",
     "postcss": "^8.3.11",
     "sequelize": "^6.9.0",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
