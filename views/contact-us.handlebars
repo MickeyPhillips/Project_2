@@ -1,21 +1,21 @@
 <style>
   /* RED BORDER ON INVALID INPUT */
-  .check input:invalid {
-      border-color: red;
-  }
+.check input:invalid {
+    border-color: red;
+}
 
   /* FLOATING LABEL */
-  .label-floating input:not(:placeholder-shown),
-  .label-floating textarea:not(:placeholder-shown) {
-      padding-top: 1.4rem;
-  }
-  .label-floating input:not(:placeholder-shown) ~ label,
-  .label-floating textarea:not(:placeholder-shown) ~ label {
-      font-size: 0.8rem;
-      transition: all 0.2s ease-in-out;
-      color: #1f9d55;
-      opacity: 1;
-  }
+.label-floating input:not(:placeholder-shown),
+.label-floating textarea:not(:placeholder-shown) {
+    padding-top: 1.4rem;
+}
+.label-floating input:not(:placeholder-shown) ~ label,
+.label-floating textarea:not(:placeholder-shown) ~ label {
+    font-size: 0.8rem;
+    transition: all 0.2s ease-in-out;
+    color: #1f9d55;
+    opacity: 1;
+}
 </style>
 <form id="contact-me" class="w-full mx-auto max-w-3xl bg-white shadow p-8 text-gray-700 ">
     <h2 class="w-full my-2 text-3xl font-bold leading-tight my-5">Contact form</h2>
@@ -70,11 +70,11 @@ var textarea = document.querySelector('textarea.autoexpand');
 textarea.addEventListener('keydown', autosize);
 
 function autosize(){
-  var el = this;
-  setTimeout(function(){
+var el = this;
+setTimeout(function(){
     el.style.cssText = 'height:auto; padding: 1.4rem .2rem .5rem';
 
     el.style.cssText = 'height:' + el.scrollHeight + 'px';
-  },0);
+},0);
 }
 </script>
