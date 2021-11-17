@@ -8,7 +8,8 @@ Role.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         name: {
             type: DataTypes.STRING,
@@ -19,7 +20,7 @@ Role.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'resource'
+        modelName: 'role'
     }
 );
 

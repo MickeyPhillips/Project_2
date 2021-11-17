@@ -1,16 +1,14 @@
-const Product = require('./Product');
 const Employee = require('./Employee');
-const Category = require('./Category');
 const Resource = require('./Resource');
 const Role = require('./Role');
 
-Employee.hasMany(Resource, {
-    foreignKey: 'employee_id'
-});
+// Employee.hasMany(Resource, {
+//     foreignKey: 'employee_id'
+// });
 
-Role.belongsTo(Employee, {
-    foreignKey: 'role_id'
-})
+// Role.belongsTo(Employee, {
+//     foreignKey: 'employee_id'
+// });
 
 // Employee expect: 
 // {
@@ -31,4 +29,4 @@ Role.belongsTo(Employee, {
 //     name (1-admin)(2-regular)
 // }
 
-module.exports = { Employee, Role }
+module.exports = { Employee, Role, Resource  }
