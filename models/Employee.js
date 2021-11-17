@@ -1,7 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class Employee extends Model {};
+class Employee extends Model { 
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password)
+    }
+};
 
 Employee.init(
     {
@@ -10,7 +15,7 @@ Employee.init(
             allowNull: false,
             primaryKey: true
         },
-        email:{
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
@@ -18,7 +23,7 @@ Employee.init(
                 isEmail: true
             }
         },
-        password:{
+        password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -35,10 +40,23 @@ Employee.init(
         },
     },
     {
+        hooks: {
+            // set up beforeCreate lifecycle "hook" functionality
+            async beforeCreate(newUserData) {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            },
+
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            }
+        },
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'employee'
+        modelName: 'user'
     }
 );
 

@@ -19,7 +19,7 @@ Role.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'resource'
+        modelName: 'role'
     }
 );
 
