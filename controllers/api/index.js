@@ -1,7 +1,8 @@
-const router = require('express').Router();
-const linkRoutes = require('./resource-routes');
+const route = require('express').Router();
+const resourceRoutes = require('./resource-routes');
+const employeeRoutes = require('./employee-routes');
 
-router.use('/link', linkRoutes);
+route.use('/link', resourceRoutes);
+route.use('/employee', employeeRoutes);
 
-
-module.exports = router;
+module.exports = route;
