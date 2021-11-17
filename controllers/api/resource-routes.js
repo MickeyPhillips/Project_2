@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {Resource} = require('../../models');
+const { sequelize } = require('../../models/Employee');
 
 router.get('/', (req, res) => {
     Resource.findAll().then(resourceDB => res.json(resourceDB))
