@@ -15,6 +15,10 @@ const resourceData = [
         name: 'test 3',
         description: 'test 3',
         link: "amazon.com"
+    },
+    {
+        name: 'test 4',
+        link: "netflix.com"
     }
 ]
 const seedResource = () => Resource.bulkCreate(resourceData);
