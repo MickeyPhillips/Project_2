@@ -2,13 +2,13 @@ const Employee = require('./Employee');
 const Resource = require('./Resource');
 const Role = require('./Role');
 
-// Employee.hasMany(Resource, {
-//     foreignKey: 'employee_id'
-// });
+Employee.hasMany(Resource, {
+    foreignKey: 'employee_id'
+});
 
-// Role.belongsTo(Employee, {
-//     foreignKey: 'employee_id'
-// });
+Role.hasMany(Employee, {
+    foreignKey: "role_id"
+})
 
 // Employee expect: 
 // {

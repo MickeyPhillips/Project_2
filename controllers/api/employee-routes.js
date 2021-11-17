@@ -1,7 +1,7 @@
-const router = require('express').Router();
+const route = require('express').Router();
 const {Employee, Role} = require('../../models');
 
-router.get('/', (req, res) => {
+route.get('/', (req, res) => {
     Employee.findAll({
         attribute: {exclude: ['password']}
     }).then(userData => res.json(userData))
@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+route.get('/:id', (req, res) => {
     Employee.findOne({
         attributes: {exclude: ['password']},
         where: {
@@ -35,3 +35,4 @@ router.get('/:id', (req, res) => {
     });
 });
 
+module.exports = route;
