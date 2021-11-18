@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/MickeyPhillips/Project_2#readme",
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "autoprefixer": "^10.4.0",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
