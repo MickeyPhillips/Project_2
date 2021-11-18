@@ -1,4 +1,6 @@
 const router = require('express').Router();
+
+
 const sequelize = require('../config/connection');
 // I just added this to test the routes with the handlebars feel free to remove these routes
 router.get('/', (req, res) => {
@@ -17,6 +19,9 @@ router.get('/employee-login', (req, res) => {
     res.render('employee-login');
 })
 
+router.get('/contact-us', (req, res) => {
+    res.render('contact-us');
+})
 
 
 router.get('*', (req, res) => {
