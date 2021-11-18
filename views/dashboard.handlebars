@@ -2,19 +2,10 @@
     <nav class="main-menu">
         <ul>
             <li>
-                <a href="http://justinfarrow.com">
+                <a href="#">
                     <i class="fa fa-home fa-2x"></i>
                     <span class="nav-text">
                         Dashboard
-                    </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-folder-open fa-2x"></i>
-                    <span class="nav-text">
-                        Add
                     </span>
                 </a>
             </li>
@@ -31,3 +22,14 @@
         </ul>
     </nav>
 </div>
+<section>
+    <ol>
+        {{#each resources as |resource| }}
+        <p>
+            {{name}}<br/>
+            {{description}}<br/>
+            {{link}}<br/>
+        </p>
+        {{/each}}
+    </ol>
+</section>

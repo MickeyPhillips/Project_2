@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const {Resource} = require('../../models');
 const { sequelize } = require('../../models/Employee');
+const withAuth = require('../../utils/auth');
+const roleAuth = require('../../utils/role-auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Resource.findAll().then(resourceDB => res.json(resourceDB))
     .catch(err => {
         console.log(err);
@@ -10,7 +12,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, roleAuth, (req, res) => {
     Resource.create(
         {
             name: req.body.name,
@@ -25,7 +27,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, roleAuth,  (req, res) => {
     Resource.destroy({
         where: {
             id: req.params.id
