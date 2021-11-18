@@ -1,7 +1,10 @@
 const router = require('express').Router();
-const linkRoutes = require('./resource-routes');
+const resourceRoutes = require('./resource-routes');
+const employeeRoutes = require('./employee-routes');
+const roleRoutes = require('./role-routes')
 
-router.use('/link', linkRoutes);
-
+router.use('/link', resourceRoutes);
+router.use('/employee', employeeRoutes);
+router.use('/role', roleRoutes);
 
 module.exports = router;

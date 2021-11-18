@@ -1,10 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
+const { Role } = require('.');
 
 class Employee extends Model { 
     checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password)
+        return bcrypt.compareSync(loginPw, this.password);
     }
 };
 
@@ -34,10 +35,6 @@ Employee.init(
         role_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
-                model: 'role',
-                key: 'id'
-            }
         },
     },
     {
