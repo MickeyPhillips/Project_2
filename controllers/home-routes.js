@@ -12,12 +12,10 @@ router.get('/locations', (req, res) => {
 });
 router.get('/careers', (req, res) => {
     res.render('careers');
-})
+});
 router.get('/employee-login', (req, res) => {
     res.render('employee-login');
-})
-
-
+});
 
 router.get('*', (req, res) => {
     res.render('home');
