@@ -36,16 +36,15 @@
 
 </head>
 <body>
-
+    
     {{{ preloader }}}
 
     {{{ body }}}
-
-
+    {{#unless loggedIn}}
     {{> footer }}
 
     {{> contact }}
-
+    {{/unless}}
 
 <!--====== Tiny Slider js ======-->
     <script src="/js/tiny-slider.js"></script>

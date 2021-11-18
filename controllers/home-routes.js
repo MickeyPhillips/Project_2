@@ -14,11 +14,11 @@ router.get('/careers', (req, res) => {
     res.render('careers');
 });
 router.get('/employee-login', (req, res) => {
+    if(req.session.loggedIn){
+        res.redirect('dashboard');
+        return;
+    }
     res.render('employee-login');
-})
-
-router.get('/dashboard', (req, res) => {
-    res.render('dashboard');
 })
 
 router.get('/contact-us', (req, res) => {
@@ -26,8 +26,8 @@ router.get('/contact-us', (req, res) => {
 })
 
 
-router.get('*', (req, res) => {
-    res.render('home');
-})
+// router.get('*', (req, res) => {
+//     res.render('home');
+// })
 
 module.exports = router;
