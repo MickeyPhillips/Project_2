@@ -14,9 +14,9 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 // I commented the db stuff out b/c it wouldn't let me run the server with the database commands without the database
 const sess = {
     secret: 'Super secret secret',
-    cooke: {},
+    cookie: {},
     resave: false,
-    saveUninitialize: true,
+    saveUninitialized: true,
     store: new SequelizeStore({
         db: sequelize
     })
