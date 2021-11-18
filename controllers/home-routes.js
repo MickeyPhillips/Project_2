@@ -17,6 +17,9 @@ router.get('/employee-login', (req, res) => {
     res.render('employee-login');
 })
 
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+})
 
 
 router.get('*', (req, res) => {
