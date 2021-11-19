@@ -50,10 +50,8 @@ router.post('/', (req, res) => {
             res.json(employeeDB);
         })
     }).catch(err => {
-        console.log(err => {
-            console.log(err);
-            res.status(500).json(err)
-        })
+        console.log(err);
+        res.status(500).json(err)
     })
 });
 
