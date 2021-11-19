@@ -22,6 +22,14 @@
         </ul>
     </nav>
 </div>
-<div>
-    <h1> here is where the link suppose to go </h1>
-</div>
+<section>
+    <ol>
+        {{#each resources as |resource| }}
+        <p>
+            {{name}}<br/>
+            {{description}}<br/>
+            {{link}}<br/>
+        </p>
+        {{/each}}
+    </ol>
+</section>

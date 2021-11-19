@@ -32,13 +32,21 @@
 
     <!--====== Dashboard CSS ======-->
     <link href="/stylesheets/dashboard.css" rel="stylesheet" href="">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.5.1/cdn.js" defer></script>
 
 </head>
 <body>
-    {{{ body }}}
 
+    {{{ preloader }}}
 
+    {{> header}}
+
+    {{{body}}}
+    {{#unless loggedIn}}
+    {{> contact }}
+
+    {{> footer }}
+    {{/unless}}
 
 <!--====== Tiny Slider js ======-->
     <script src="/js/tiny-slider.js"></script>

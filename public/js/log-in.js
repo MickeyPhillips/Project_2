@@ -20,6 +20,7 @@ async function signupFormHandler(event){
         });
         
         if (response.ok){
+            alert('Account successfully created. You can now sign in')
             console.log('success')
         } else {
             alert(response.statusText);

@@ -1,42 +1,55 @@
-<nav class="relative bg-green-300 border-b-2 border-gray-300 text-gray-900 style-stuff">
-  <div class="container mx-auto flex justify-between">
-    <div class="relative block p-4 lg:p-6">
-      <img src="/images/ArmadilloMaterialsGreenLogo.png">
+<!--====== PRELOADER PART START ======-->
+<div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <ul class="flex">
-      <li>
-        <div class="menu">
-          <a href="/products">Products</a>
-          <div class="blahblahrow rowc rowc1">Item 1</div>
-          <div class="blahblahrow rowc rowc2">Item 2</div>
-          <div class="blahblahrow rowc rowc3">Item 3</div>
-          <div class="blahblahrow rowc rowc4">Item 4</div>
-          <div class="blahblahrow rowc rowc5">Item 5</div>
-          <div class="blahblahrow rowc rowc6">Item 6</div>
-        </div>
-      </li>
-      <li>
-        <div class="menu">
-          <a href="/locations">Locations</a>
-          <div class="blahblahrow rowc rowc1">Item 1</div>
-          <div class="blahblahrow rowc rowc2">Item 2</div>
-          <div class="blahblahrow rowc rowc3">Item 3</div>
-          <div class="blahblahrow rowc rowc4">Item 4</div>
-          <div class="blahblahrow rowc rowc5">Item 5</div>
-          <div class="blahblahrow rowc rowc6">Item 6</div>
-        </div>
-      </li>
-      <li>
-        <div class="menu">
-          <a href="/careers">Careers</a>
-          <div class="blahblahrow rowc rowc1">Item 1</div>
-          <div class="blahblahrow rowc rowc2">Item 2</div>
-          <div class="blahblahrow rowc rowc3">Item 3</div>
-          <div class="blahblahrow rowc rowc4">Item 4</div>
-          <div class="blahblahrow rowc rowc5">Item 5</div>
-          <div class="blahblahrow rowc rowc6">Item 6</div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+<!--====== PRELOADER PART ENDS ======-->
+
+<!--====== HEADER PART START ======-->
+<section class="header_area">
+    <div class="navbar-area bg-white">
+        <div class="container relative">
+            <div class="row items-center">
+                <div class="w-full">
+                    <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
+                        <a class="navbar-brand mr-5" href="index.html">
+                            {{!-- <img class="h-10 w-10" src="/images/ArmadilloMaterialsGreenLogo.png" alt="Logo"></a> --}}
+                        <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+
+                        <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent shadow lg:shadow-none" id="navbarOne">
+                            <ul id="nav" class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
+
+                                <li class="nav-item ml-5 lg:ml-11">
+                                    <a  href="/products">Products</a>
+                                </li>
+                                <li class="nav-item ml-5 lg:ml-11">
+                                    <a  href="/locations">Locations</a>
+                                </li>
+                                <li class="nav-item ml-5 lg:ml-11">
+                                    <a  href="/contact-us">Contact</a>
+                                </li>
+
+                            </ul>
+                        </div> <!-- navbar collapse -->
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- header navbar -->
+</section>

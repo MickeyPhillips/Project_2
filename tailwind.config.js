@@ -2,6 +2,12 @@ module.exports = {
 	purge: [],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
+		aspectRatio: {
+			1: '1',
+			2: '2',
+			3: '3',
+			4: '4',
+		},
 		screens: {
 			sm: '540px',
 			// => @media (min-width: 640px) { ... }
@@ -90,7 +96,8 @@ module.exports = {
 		},
 	},
 	variants: {
+		aspectRatio: ['responsive', 'hover'],
 		extend: {},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/aspect-ratio')],
 };
