@@ -12,7 +12,7 @@ router.get('/', withAuth, (req, res) => {
         console.log(resourceDB);
         const resources = resourceDB.map(resource => resource.get({ plain: true }));
         console.log(resources);
-        res.render('dashboard', { resources, loggedIn: req.session.loggedIn});
+        res.render('dashboard', { resources, loggedIn: req.session.loggedIn, admin: req.session.admin });
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
