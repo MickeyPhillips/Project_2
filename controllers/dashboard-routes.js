@@ -12,8 +12,8 @@ router.get('/', withAuth, (req, res) => {
     ).then(resourceDB => {
         console.log(resourceDB);
         const resources = resourceDB.map(resource => resource.get({ plain: true }));
-        console.log(resources);
-        res.render('dashboard', { resources, admin: req.session.admin });
+        const admin = { admin: req.session.admin};
+        res.render('dashboard', { resources, admin });
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);

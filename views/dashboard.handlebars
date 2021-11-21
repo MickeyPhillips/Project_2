@@ -24,6 +24,7 @@
 </div>
 {{!-- Admin dashboard form to post resources --}}
 {{!-- If admin id allow access --}}
+{{#if admin}}
 <div class="admin-form">
     <form>
         <input type="text" id="rname" value="" placeholder="Enter Resource Name">
@@ -32,19 +33,17 @@
         <input type="submit" id="resource-submit" value="Submit">
     </form>
 </div>
+{{/if}}
 {{!-- End of admin posting form --}}
 <section>
     <ol>
-        {{#each resources as |resource| }}
-        <div id = {{id}}>
+        {{#each resources}}
+        <li>
             {{name}}<br/>
             {{description}}<br/>
             {{link}}<br/>
-            {{admin}}
-            {{#if session.admin}}
             <button id = {{id}} type = 'submit'>Delete</button>
-            {{/if}}
-        </div>
+        </li>
         {{/each}}
     </ol>
 </section>
