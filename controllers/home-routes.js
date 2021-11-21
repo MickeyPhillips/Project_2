@@ -25,7 +25,7 @@ router.get('/contact-us', (req, res) => {
     res.render('contact-us');
 })
 
-router.get('/employee-login/admin', (req, res) => {
+router.get('/admin', (req, res) => {
     res.render('admin')
 })
 

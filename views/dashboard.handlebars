@@ -25,11 +25,15 @@
 <section>
     <ol>
         {{#each resources as |resource| }}
-        <p>
+        <div id = {{id}}>
             {{name}}<br/>
             {{description}}<br/>
             {{link}}<br/>
-        </p>
+            {{admin}}
+            {{#if session.admin}}
+            <button id = {{id}} type = 'submit'>Delete</button>
+            {{/if}}
+        </div>
         {{/each}}
     </ol>
 </section>

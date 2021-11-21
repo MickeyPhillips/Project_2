@@ -27,7 +27,7 @@ router.post('/', withAuth, roleAuth, (req, res) => {
     });
 });
 
-router.delete('/:id', withAuth, roleAuth,  (req, res) => {
+router.delete('/delete/:id', withAuth, roleAuth,  (req, res) => {
     Resource.destroy({
         where: {
             id: req.params.id
