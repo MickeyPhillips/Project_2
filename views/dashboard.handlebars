@@ -22,6 +22,17 @@
         </ul>
     </nav>
 </div>
+{{!-- Admin dashboard form to post resources --}}
+{{!-- If admin id allow access --}}
+<div class="admin-form">
+    <form>
+        <input type="text" id="rname" value="" placeholder="Enter Resource Name">
+        <input type="text" id="desc" value="" placeholder="Enter Resource Description">
+        <input type="url" id="link" value="" placeholder="Enter Resource Link">
+        <input type="submit" id="resource-submit" value="Submit">
+    </form>
+</div>
+{{!-- End of admin posting form --}}
 <section>
     <ol>
         {{#each resources as |resource| }}
