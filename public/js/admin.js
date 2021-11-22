@@ -1,9 +1,8 @@
 async function adminFormHandler(event){
     event.preventDefault();
-    console.log('here')
+
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    console.log(email, password);
 
     if (email && password) {
         const response = await fetch('/api/employee', 
