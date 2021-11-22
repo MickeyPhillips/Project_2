@@ -50,7 +50,7 @@ async function loginFormHandler(event) {
           alert(response.statusText);
       }
     }
-}
+};
 
 
 document.querySelector('#login').addEventListener('click', loginFormHandler);

@@ -1,4 +1,4 @@
-<div class="area"></div>
+{{!-- <div class="area"></div>
     <nav class="main-menu">
         <ul>
             <li>
@@ -21,9 +21,10 @@
             </li>
         </ul>
     </nav>
-</div>
+</div> --}}
 {{!-- Admin dashboard form to post resources --}}
 {{!-- If admin id allow access --}}
+{{#if admin}}
 <div class="admin-form">
     <form>
         <input type="text" id="rname" value="" placeholder="Enter Resource Name">
@@ -32,18 +33,24 @@
         <input type="submit" id="resource-submit" value="Submit">
     </form>
 </div>
+{{/if}}
 {{!-- End of admin posting form --}}
 <section>
     <ol>
-        {{#each resources as |resource| }}
-        <p>
+        {{#each resources}}
+        <li>
             {{name}}<br/>
             {{description}}<br/>
             {{link}}<br/>
-        </p>
+            <button class = 'delete-btn' type ='submit' id = {{id}} >Delete</button>
+        </li>
         {{/each}}
     </ol>
 </section>
 
 
 <script src = '/js/log-out.js'></script>
+{{#if admin}}
+<script src = 'js/delete.js'></script>
+<script src = 'js/add-link.js'></script>
+{{/if}}

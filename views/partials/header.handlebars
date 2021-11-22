@@ -26,11 +26,14 @@
                     <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
                         <a class="navbar-brand mr-5" href="index.html">
                             {{!-- <img class="h-10 w-10" src="/images/ArmadilloMaterialsGreenLogo.png" alt="Logo"></a> --}}
+
+                            {{!-- Hamburger Menu --}}
                         <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
                         </button>
+                        {{!-- Hamburger Menu End --}}
 
                         <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent shadow lg:shadow-none" id="navbarOne">
                             <ul id="nav" class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
@@ -44,7 +47,6 @@
                                 <li class="nav-item ml-5 lg:ml-11">
                                     <a  href="/contact-us">Contact</a>
                                 </li>
-
                             </ul>
                         </div> <!-- navbar collapse -->
                     </nav> <!-- navbar -->
@@ -52,4 +54,27 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </div> <!-- header navbar -->
+
+    <div id="home" class="header_hero bg-gray relative z-10 overflow-hidden lg:flex items-center">
+        <div class="container">
+                <div class="row">
+                    <div class="w-full lg:w-1/2">
+                        <div class="header_hero_content pt-150 lg:pt-0">
+                            <h2 class="hero_title text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold">Armadillo <span class="text-theme-color">Materials</span></h2>
+                            <p class="mt-8 lg:mr-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+                            <div class="hero_btn mt-10">
+                                <a class="main-btn" href="#0">Get Started</a>
+                            </div>
+                        </div> <!-- header hero content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="lg:block"></div>
+
+            <div class="header_image flex items-center">
+                <div class="image 2xl:pl-25">
+                    <img src="/images/hero-background.jpg" alt="Header Image">
+                </div>
+            </div> <!-- header image -->
+        </div> <!-- header hero -->
 </section>
