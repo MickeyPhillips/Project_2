@@ -91,6 +91,9 @@ router.post('/login', (req, res) => {
                 res.json({ employee: employeeDB, message: 'You are now logged in'})
             })
         }
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     })
 });
 
