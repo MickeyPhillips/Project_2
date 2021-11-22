@@ -1,4 +1,4 @@
-<div class="area"></div>
+{{!-- <div class="area"></div>
     <nav class="main-menu">
         <ul>
             <li>
@@ -21,7 +21,7 @@
             </li>
         </ul>
     </nav>
-</div>
+</div> --}}
 {{!-- Admin dashboard form to post resources --}}
 {{!-- If admin id allow access --}}
 {{#if admin}}
@@ -42,7 +42,7 @@
             {{name}}<br/>
             {{description}}<br/>
             {{link}}<br/>
-            <button id = {{id}} type = 'submit'>Delete</button>
+            <button class = 'delete-btn' type ='submit' id = {{id}} >Delete</button>
         </li>
         {{/each}}
     </ol>
@@ -50,3 +50,7 @@
 
 
 <script src = '/js/log-out.js'></script>
+{{#if admin}}
+<script src = 'js/delete.js'></script>
+<script src = 'js/add-link.js'></script>
+{{/if}}
