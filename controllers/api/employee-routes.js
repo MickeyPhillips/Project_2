@@ -72,14 +72,25 @@ router.post('/login', (req, res) => {
             res.status(400).json({ message: 'Incorrect password' });
             return;
         }
+        if(employeeDB.role_id === 1){
+            req.session.save(() => {
+                req.session.email = employeeDB.email;
+                req.session.loggedIn = true;
+                req.session.role_id = employeeDB.role_id;
+                req.session.admin = true;
 
-        req.session.save(() => {
-            req.session.email = employeeDB.email;
-            req.session.loggedIn = true;
-            req.session.role_id = employeeDB.role_id;
+                res.json({ employee: employeeDB, message: 'You are now logged in'})
+            })
+        } else {
+            req.session.save(() => {
+                req.session.email = employeeDB.email;
+                req.session.loggedIn = true;
+                req.session.role_id = employeeDB.role_id;
+                req.session.admin = false;
 
-            res.json({ employee: employeeDB, message: 'You are now logged in'})
-        })
+                res.json({ employee: employeeDB, message: 'You are now logged in'})
+            })
+        }
     })
 });
 
