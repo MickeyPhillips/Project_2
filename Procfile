@@ -1,0 +1,1 @@
+web: npm install server && node server/server.js
