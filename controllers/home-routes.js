@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 // I just added this to test the routes with the handlebars feel free to remove these routes
 router.get('/', (req, res) => {
-    res.render('home');
+    res.redirect('home');
 });
 router.get('/products', (req, res) => {
     res.render('products');
