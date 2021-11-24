@@ -1,39 +1,40 @@
 {
-  "name": "project_2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "devStart": "nodemon server.js",
-    "seed": "node seeds/index.js",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MickeyPhillips/Project_2.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MickeyPhillips/Project_2/issues"
-  },
-  "homepage": "https://github.com/MickeyPhillips/Project_2#readme",
-  "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.3.0",
-    "autoprefixer": "^10.4.0",
-    "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.2",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.3.4",
-    "express-session": "^1.17.2",
-    "mysql2": "^2.3.2",
-    "postcss": "^8.3.11",
-    "sequelize": "^6.9.0",
-    "tailwindcss": "^2.2.19",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.14"
-  }
+	"name": "project_2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"devStart": "nodemon server.js",
+		"seed": "node seeds/index.js",
+		"start": "node server.js",
+		"build:css": "tailwind build -i src/tailwindcss.css -o public/stylesheets/tailwindcss.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MickeyPhillips/Project_2.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MickeyPhillips/Project_2/issues"
+	},
+	"homepage": "https://github.com/MickeyPhillips/Project_2#readme",
+	"dependencies": {
+		"@tailwindcss/aspect-ratio": "^0.3.0",
+		"autoprefixer": "^10.4.0",
+		"bcrypt": "^5.0.1",
+		"connect-session-sequelize": "^7.1.2",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"express-handlebars": "^5.3.4",
+		"express-session": "^1.17.2",
+		"mysql2": "^2.3.2",
+		"postcss": "^8.3.11",
+		"sequelize": "^6.9.0",
+		"tailwindcss": "^2.2.19",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.14"
+	}
 }
