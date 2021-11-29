@@ -1,4 +1,4 @@
-{{!-- <div class="area"></div>
+<div class="area"></div>
     <nav class="main-menu">
         <ul>
             <li>
@@ -21,11 +21,11 @@
             </li>
         </ul>
     </nav>
-</div> --}}
+</div>
 {{!-- Admin dashboard form to post resources --}}
 {{!-- If admin id allow access --}}
 {{#if admin}}
-<div class="admin-form">
+<div class="admin-form flex justify-center">
     <form>
         <input type="text" id="rname" value="" placeholder="Enter Resource Name">
         <input type="text" id="desc" value="" placeholder="Enter Resource Description">
@@ -35,7 +35,7 @@
 </div>
 {{/if}}
 {{!-- End of admin posting form --}}
-<section>
+<section class = "flex justify-center">
     <ol>
         {{#each resources}}
         <li>
