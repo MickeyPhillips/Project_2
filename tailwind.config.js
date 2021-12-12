@@ -1,6 +1,5 @@
 module.exports = {
-	purge: [],
-	darkMode: false, // or 'media' or 'class'
+	content: ['./views/**/*.{html,js,handlebars}'],
 	theme: {
 		aspectRatio: {
 			1: '1',
